@@ -1,0 +1,375 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		60796EE619190F4100A9926B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60796EE519190F4100A9926B /* Foundation.framework */; };
+		60796EE819190F4100A9926B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60796EE719190F4100A9926B /* CoreGraphics.framework */; };
+		60796EEA19190F4100A9926B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60796EE919190F4100A9926B /* UIKit.framework */; };
+		60796EF019190F4100A9926B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 60796EEE19190F4100A9926B /* InfoPlist.strings */; };
+		60796EF219190F4100A9926B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60796EF119190F4100A9926B /* main.m */; };
+		60796EF819190F4100A9926B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60796EF719190F4100A9926B /* Images.xcassets */; };
+		60796F1919190FBB00A9926B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 60796F1819190FBB00A9926B /* libz.dylib */; };
+		60796F201919174D00A9926B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 60796F1F1919174D00A9926B /* libsqlite3.dylib */; };
+		60796F2A1919C70100A9926B /* ffi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60796F291919C70100A9926B /* ffi.framework */; };
+		60796F2C1919C70800A9926B /* Python.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60796F2B1919C70800A9926B /* Python.framework */; };
+		60796F39191CDBBA00A9926B /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60796F38191CDBBA00A9926B /* CoreFoundation.framework */; };
+		60F0BABE191FC83F006EC268 /* src in Resources */ = {isa = PBXBuildFile; fileRef = 60F0BABD191FC83F006EC268 /* src */; };
+		60F0BAC0191FC868006EC268 /* app_packages in Resources */ = {isa = PBXBuildFile; fileRef = 60F0BABF191FC868006EC268 /* app_packages */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		60796EE219190F4100A9926B /* {{ cookiecutter.app_name }}.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = {{ cookiecutter.app_name }}.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		60796EE519190F4100A9926B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		60796EE719190F4100A9926B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		60796EE919190F4100A9926B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		60796EED19190F4100A9926B /* {{ cookiecutter.app_name }}-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "{{ cookiecutter.app_name }}-Info.plist"; sourceTree = "<group>"; };
+		60796EEF19190F4100A9926B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		60796EF119190F4100A9926B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		60796EF319190F4100A9926B /* {{ cookiecutter.app_name }}-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "{{ cookiecutter.app_name }}-Prefix.pch"; sourceTree = "<group>"; };
+		60796EF719190F4100A9926B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		60796F1819190FBB00A9926B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		60796F1F1919174D00A9926B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		60796F291919C70100A9926B /* ffi.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ffi.framework; sourceTree = "<group>"; };
+		60796F2B1919C70800A9926B /* Python.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Python.framework; sourceTree = "<group>"; };
+		60796F34191A76C400A9926B /* include */ = {isa = PBXFileReference; lastKnownFileType = folder; name = include; path = Python.framework/Resources/include; sourceTree = "<group>"; };
+		60796F35191A76C400A9926B /* lib */ = {isa = PBXFileReference; lastKnownFileType = folder; name = lib; path = Python.framework/Resources/lib; sourceTree = "<group>"; };
+		60796F38191CDBBA00A9926B /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		60F0BABD191FC83F006EC268 /* src */ = {isa = PBXFileReference; lastKnownFileType = folder; path = src; sourceTree = SOURCE_ROOT; };
+		60F0BABF191FC868006EC268 /* app_packages */ = {isa = PBXFileReference; lastKnownFileType = folder; path = app_packages; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		60796EDF19190F4100A9926B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60796F39191CDBBA00A9926B /* CoreFoundation.framework in Frameworks */,
+				60796F2C1919C70800A9926B /* Python.framework in Frameworks */,
+				60796F2A1919C70100A9926B /* ffi.framework in Frameworks */,
+				60796F201919174D00A9926B /* libsqlite3.dylib in Frameworks */,
+				60796F1919190FBB00A9926B /* libz.dylib in Frameworks */,
+				60796EE819190F4100A9926B /* CoreGraphics.framework in Frameworks */,
+				60796EEA19190F4100A9926B /* UIKit.framework in Frameworks */,
+				60796EE619190F4100A9926B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		60796ED919190F4100A9926B = {
+			isa = PBXGroup;
+			children = (
+				60796F1A19190FEB00A9926B /* Python */,
+				60796EEB19190F4100A9926B /* {{ cookiecutter.app_name }} */,
+				60796EE419190F4100A9926B /* Frameworks */,
+				60796EE319190F4100A9926B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		60796EE319190F4100A9926B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				60796EE219190F4100A9926B /* {{ cookiecutter.app_name }}.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		60796EE419190F4100A9926B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				60796F1F1919174D00A9926B /* libsqlite3.dylib */,
+				60796F1819190FBB00A9926B /* libz.dylib */,
+				60796F291919C70100A9926B /* ffi.framework */,
+				60796F2B1919C70800A9926B /* Python.framework */,
+				60796EE519190F4100A9926B /* Foundation.framework */,
+				60796F38191CDBBA00A9926B /* CoreFoundation.framework */,
+				60796EE719190F4100A9926B /* CoreGraphics.framework */,
+				60796EE919190F4100A9926B /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		60796EEB19190F4100A9926B /* {{ cookiecutter.app_name }} */ = {
+			isa = PBXGroup;
+			children = (
+				60F0BABF191FC868006EC268 /* app_packages */,
+				60F0BABD191FC83F006EC268 /* src */,
+				60796EF719190F4100A9926B /* Images.xcassets */,
+				60796EEC19190F4100A9926B /* Supporting Files */,
+			);
+			path = {{ cookiecutter.app_name }};
+			sourceTree = "<group>";
+		};
+		60796EEC19190F4100A9926B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				60796EED19190F4100A9926B /* {{ cookiecutter.app_name }}-Info.plist */,
+				60796EEE19190F4100A9926B /* InfoPlist.strings */,
+				60796EF119190F4100A9926B /* main.m */,
+				60796EF319190F4100A9926B /* {{ cookiecutter.app_name }}-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		60796F1A19190FEB00A9926B /* Python */ = {
+			isa = PBXGroup;
+			children = (
+				60796F34191A76C400A9926B /* include */,
+				60796F35191A76C400A9926B /* lib */,
+			);
+			name = Python;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		60796EE119190F4100A9926B /* {{ cookiecutter.app_name }} */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 60796F0E19190F4100A9926B /* Build configuration list for PBXNativeTarget "{{ cookiecutter.app_name }}" */;
+			buildPhases = (
+				60796F2F1919C7E700A9926B /* Refresh Python source */,
+				60796EDE19190F4100A9926B /* Sources */,
+				60796EDF19190F4100A9926B /* Frameworks */,
+				60796EE019190F4100A9926B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = {{ cookiecutter.app_name }};
+			productName = {{ cookiecutter.app_name }};
+			productReference = 60796EE219190F4100A9926B /* {{ cookiecutter.app_name }}.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		60796EDA19190F4100A9926B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = Py;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "{{ cookiecutter.organization }}";
+			};
+			buildConfigurationList = 60796EDD19190F4100A9926B /* Build configuration list for PBXProject "{{ cookiecutter.app_name }}" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 60796ED919190F4100A9926B;
+			productRefGroup = 60796EE319190F4100A9926B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				60796EE119190F4100A9926B /* {{ cookiecutter.app_name }} */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		60796EE019190F4100A9926B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60F0BABE191FC83F006EC268 /* src in Resources */,
+				60796EF019190F4100A9926B /* InfoPlist.strings in Resources */,
+				60796EF819190F4100A9926B /* Images.xcassets in Resources */,
+				60F0BAC0191FC868006EC268 /* app_packages in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		60796F2F1919C7E700A9926B /* Refresh Python source */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Refresh Python source";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "rsync -pvtrL --exclude .hg --exclude .svn --exclude .git $PROJECT_DIR/Python.framework/Resources/lib $BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git $PROJECT_DIR/Python.framework/Resources/include $BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git $PROJECT_DIR/src $BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git $PROJECT_DIR/app_packages $BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		60796EDE19190F4100A9926B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60796EF219190F4100A9926B /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		60796EEE19190F4100A9926B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				60796EEF19190F4100A9926B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		60796F0C19190F4100A9926B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		60796F0D19190F4100A9926B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		60796F0F19190F4100A9926B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "{{ cookiecutter.app_name }}/{{ cookiecutter.app_name }}-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(PROJECT_DIR)/Python.framework/Resources/include/python2.7\"",
+				);
+				INFOPLIST_FILE = "{{ cookiecutter.app_name }}/{{ cookiecutter.app_name }}-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = include/python2.7;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		60796F1019190F4100A9926B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "{{ cookiecutter.app_name }}/{{ cookiecutter.app_name }}-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(PROJECT_DIR)/Python.framework/Resources/include/python2.7\"",
+				);
+				INFOPLIST_FILE = "{{ cookiecutter.app_name }}/{{ cookiecutter.app_name }}-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = include/python2.7;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		60796EDD19190F4100A9926B /* Build configuration list for PBXProject "{{ cookiecutter.app_name }}" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60796F0C19190F4100A9926B /* Debug */,
+				60796F0D19190F4100A9926B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		60796F0E19190F4100A9926B /* Build configuration list for PBXNativeTarget "{{ cookiecutter.app_name }}" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60796F0F19190F4100A9926B /* Debug */,
+				60796F1019190F4100A9926B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 60796EDA19190F4100A9926B /* Project object */;
+}
