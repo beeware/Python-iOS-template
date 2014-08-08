@@ -13,7 +13,7 @@ Using this template
 
 2. Run `cookiecutter` on the Python-iOS template::
 
-    $ cookiecutter git://github.com/pybee/Python-iOS-template
+    $ cookiecutter https://github.com/pybee/Python-iOS-template
 
 3. Clone Python.framework-iOS::
 
