@@ -11,20 +11,16 @@ Using this template
 
     $ pip install cookiecutter
 
-2. Run `cookiecutter` on the Python-iOS template::
+2. Run ``cookiecutter`` on the Python-iOS template::
 
     $ cookiecutter https://github.com/pybee/Python-iOS-template
 
-3. Clone Python.framework-iOS::
-
-    $ git clone git://github.com/pybee/Python.framework-iOS
-
-4. `Download the Python iOS support package`_, and extract it. This
+3. `Download the Python iOS support package`_, and extract it. This
    will give you two frameworks.
 
-     * ``ffi.framework``
+   * ``ffi.framework``
 
-     * ``Python.framework``
+   * ``Python.framework``
 
    Alternatively, you can download the `Python-iOS-support`_ project, and
    build your own versions of these frameworks.
@@ -57,7 +53,7 @@ Next steps
 
 Of course, just running Python code isn't very interesting by itself - you'll
 be able to output to the console, and see that output in XCode, but if you
-run tap the icon on your phone, you won't see anything - because there isn't a
+tap the app icon on your phone, you won't see anything - because there isn't a
 visible console on an iPhone.
 
 To do something interesting, you'll need to work with the native iOS system
