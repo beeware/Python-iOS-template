@@ -48,12 +48,6 @@ directory structure that looks something like::
 
 You're now ready to open the XCode project file, build and run your project!
 
-.. note:: Xcode version compatibility
-
-   At this time, the libraries only compile work with Xcode 5.1.1 and
-   earlier. See `this ticket`_ for details of a workaround if you need
-   to have Xcode 6 installed on your machine.
-
 Next steps
 ----------
 
@@ -104,8 +98,7 @@ links in the project source::
         setup.py
 
 .. _cookiecutter: http://github.com/audreyr/cookiecutter
-.. _Download the Python iOS support package: https://github.com/pybee/Python-iOS-support/releases/download/2.7.1-b2/Python-2.7.1-iOS-support.b2.tar.gz
+.. _Download the Python iOS support package: https://github.com/pybee/Python-iOS-support/releases/download/2.7.1-b3/Python-2.7.1-iOS-support.b3.tar.gz
 .. _Python-iOS-support: http://github.com/pybee/Python-iOS-support
 .. _toga: http://pybee.org/toga
 .. _Rubicon: http://github.com/pybee/rubicon-objc
-.. _this ticket: https://github.com/pybee/Python-iOS-template/issues/3
