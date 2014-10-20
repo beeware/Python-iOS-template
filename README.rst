@@ -33,6 +33,10 @@ If you've done this correctly, a project called ``myproject`` should have a
 directory structure that looks something like::
 
     iOS/
+        app/
+            myproject/
+                __init__.py
+                main.py
         app_packages/
         ffi.framework/
             ...
@@ -41,12 +45,14 @@ directory structure that looks something like::
         myproject/
             ...
         myproject.xcodeproj/
-        src/
-            myproject/
-                __init__.py
-                main.py
 
 You're now ready to open the XCode project file, build and run your project!
+
+.. note:: Xcode version compatibility
+
+   At this time, the libraries only compile work with Xcode 5.1.1 and
+   earlier. See `this ticket`_ for details of a workaround if you need
+   to have Xcode 6 installed on your machine.
 
 Next steps
 ----------
@@ -57,12 +63,20 @@ tap the app icon on your phone, you won't see anything - because there isn't a
 visible console on an iPhone.
 
 To do something interesting, you'll need to work with the native iOS system
-libraries to draw widgets and respond to screen taps.
+libraries to draw widgets and respond to screen taps. The support libraries
+you added in step 3 have the `Rubicon`_ Objective C bridging library pre-
+installed to enable an easy interface with the iOS system libraries.
 
-Or, you could use a library like `toga`_ that provides a cross-platform widget
-toolkit that supports iOS.
+Alternatively, you could use a library like `toga`_ that provides a cross-platform
+widget toolkit that supports iOS.
 
-If you have any external library dependencies (like `toga`, or anything other
+Regardless of whether you use Toga, or you write an application natively,  the
+templte project will try to instantiate a ``UIApplicationMain`` instance,
+using a class named ``PythonAppDelegate`` as the App delegate. If a class of
+that name can't be instantiated, the error raised will be logged, and the
+Python interpreter will be shut down.
+
+If you have any external library dependencies (like ``toga``, or anything other
 third-party library), you should install the library code into the
 ``app_packages`` directory. This directory is the same as a  ``site_packages``
 directory on a desktop Python install.
@@ -80,8 +94,9 @@ links in the project source::
 
     myproject/
         iOS/
-           src/
+           app/
                myproject -> ../../myproject
+           ...
         myproject/
             __init__.py
             main.py
@@ -89,6 +104,8 @@ links in the project source::
         setup.py
 
 .. _cookiecutter: http://github.com/audreyr/cookiecutter
-.. _Download the Python iOS support package: https://github.com/pybee/Python-iOS-support/releases/download/2.7.1-b1/Python-2.7.1-iOS-support.b1.tar.gz
+.. _Download the Python iOS support package: https://github.com/pybee/Python-iOS-support/releases/download/2.7.1-b2/Python-2.7.1-iOS-support.b2.tar.gz
 .. _Python-iOS-support: http://github.com/pybee/Python-iOS-support
 .. _toga: http://pybee.org/toga
+.. _Rubicon: http://github.com/pybee/rubicon-objc
+.. _this ticket: https://github.com/pybee/Python-iOS-template/issues/3

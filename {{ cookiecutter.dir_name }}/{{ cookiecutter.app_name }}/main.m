@@ -32,8 +32,7 @@ int main(int argc, char *argv[]) {
         putenv("PYTHONDONTWRITEBYTECODE=1");
         putenv("PYTHONNOUSERSITE=1");
 
-        NSString *python_path = [NSString stringWithFormat:@"PYTHONPATH=%@/src:%@/app_packages",
-                                 resourcePath, resourcePath, nil];
+        NSString *python_path = [NSString stringWithFormat:@"PYTHONPATH=%@/app:%@/app_packages", resourcePath, resourcePath, nil];
         putenv((char *)[python_path UTF8String]);
         // putenv("PYTHONVERBOSE=1");
 
@@ -48,18 +47,31 @@ int main(int argc, char *argv[]) {
         PyEval_InitThreads();
 
         // Search and start main.py
-        const char * prog = [
-                             [[NSBundle mainBundle] pathForResource:@"src/{{ cookiecutter.app_name }}/main" ofType:@"py"] cStringUsingEncoding:
-                             NSUTF8StringEncoding];
+        const char * prog = [[[NSBundle mainBundle] pathForResource:@"app/{{ cookiecutter.app_name }}/main" ofType:@"py"] cStringUsingEncoding:NSUTF8StringEncoding];
         NSLog(@"Running %s", prog);
         FILE* fd = fopen(prog, "r");
-        if (fd == NULL) {
+        if (fd == NULL)
+        {
             ret = 1;
             NSLog(@"Unable to open main.py, abort.");
-        } else {
+        }
+        else
+        {
             ret = PyRun_SimpleFileEx(fd, prog, 1);
             if (ret != 0)
+            {
                 NSLog(@"Application quit abnormally!");
+            }
+        }
+
+        @try
+        {
+            // Start the Python app
+            UIApplicationMain(0, NULL, NULL, @"PythonAppDelegate");
+        }
+        @catch (NSException *exception)
+        {
+            NSLog(@"Error running Python application: %@", exception.reason);
         }
 
         Py_Finalize();
