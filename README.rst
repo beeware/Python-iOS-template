@@ -70,8 +70,8 @@ installed to enable an easy interface with the iOS system libraries.
 Alternatively, you could use a library like `toga`_ that provides a cross-platform
 widget toolkit that supports iOS.
 
-Regardless of whether you use Toga, or you write an application natively,  the
-templte project will try to instantiate a ``UIApplicationMain`` instance,
+Regardless of whether you use Toga, or you write an application natively, the
+template project will try to instantiate a ``UIApplicationMain`` instance,
 using a class named ``PythonAppDelegate`` as the App delegate. If a class of
 that name can't be instantiated, the error raised will be logged, and the
 Python interpreter will be shut down.
