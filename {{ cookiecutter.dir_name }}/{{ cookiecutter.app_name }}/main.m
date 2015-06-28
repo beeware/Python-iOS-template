@@ -41,7 +41,12 @@ int main(int argc, char *argv[]) {
         Py_Initialize();
 
         python_argv = PyMem_RawMalloc(sizeof(wchar_t*) * argc);
-        for (i = 0; i < argc; i++) {
+        const char* main_script = [
+            [[NSBundle mainBundle] pathForResource:@"app/{{ cookiecutter.app_name }}/main"
+                                            ofType:@"py"] cStringUsingEncoding:NSUTF8StringEncoding];
+
+        python_argv[0] = _Py_char2wchar(main_script, NULL);
+        for (i = 1; i < argc; i++) {
             python_argv[i] = _Py_char2wchar(argv[i], NULL);
         }
 
@@ -50,10 +55,9 @@ int main(int argc, char *argv[]) {
         // If other modules are using threads, we need to initialize them.
         PyEval_InitThreads();
 
-        // Search and start main.py
-        const char* prog = [[[NSBundle mainBundle] pathForResource:@"app/{{ cookiecutter.app_name }}/main" ofType:@"py"] cStringUsingEncoding:NSUTF8StringEncoding];
-        NSLog(@"Running %s", prog);
-        FILE* fd = fopen(prog, "r");
+        // Start main.py
+        NSLog(@"Running %s", main_script);
+        FILE* fd = fopen(main_script, "r");
         if (fd == NULL)
         {
             ret = 1;
@@ -61,7 +65,7 @@ int main(int argc, char *argv[]) {
         }
         else
         {
-            ret = PyRun_SimpleFileEx(fd, prog, 1);
+            ret = PyRun_SimpleFileEx(fd, main_script, 1);
             if (ret != 0)
             {
                 NSLog(@"Application quit abnormally!");
