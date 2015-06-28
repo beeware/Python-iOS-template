@@ -4,7 +4,6 @@
 //
 //  Copyright (c) 2014 Russell Keith-Magee.
 //  Released under the terms of the BSD license.
-//  Based on an intial file provided as part of the Kivy project
 //  Copyright (c) 2014 Russell Keith-Magee.
 //
 
@@ -15,15 +14,12 @@
 
 int main(int argc, char *argv[]) {
     int ret = 0;
+    unsigned int i;
+    NSString *python_path;
+    wchar_t* python_home;
+    wchar_t** python_argv;
 
     @autoreleasepool {
-
-#if TARGET_IPHONE_SIMULATOR
-        putenv("TARGET_IPHONE_SIMULATOR=1");
-#else
-        putenv("TARGET_IPHONE=1");
-#endif
-
         NSString * resourcePath = [[NSBundle mainBundle] resourcePath];
 
         // Special environment to prefer .pyo, and don't write bytecode if .py are found
@@ -32,22 +28,30 @@ int main(int argc, char *argv[]) {
         putenv("PYTHONDONTWRITEBYTECODE=1");
         putenv("PYTHONNOUSERSITE=1");
 
-        NSString *python_path = [NSString stringWithFormat:@"PYTHONPATH=%@/app:%@/app_packages", resourcePath, resourcePath, nil];
+        python_path = [NSString stringWithFormat:@"PYTHONPATH=%@/app:%@/app_packages",
+                       resourcePath, resourcePath, nil];
+        NSLog(@"%s", [python_path UTF8String]);
         putenv((char *)[python_path UTF8String]);
-        // putenv("PYTHONVERBOSE=1");
 
         NSLog(@"PythonHome is: %s", [resourcePath UTF8String]);
-        Py_SetPythonHome((char *)[resourcePath UTF8String]);
+        python_home = _Py_char2wchar([resourcePath cStringUsingEncoding:NSUTF8StringEncoding], NULL);
+        Py_SetPythonHome(python_home);
 
         NSLog(@"Initializing Python runtime");
         Py_Initialize();
-        PySys_SetArgv(argc, argv);
 
-        // If other modules are using thread, we need to initialize them before.
+        python_argv = PyMem_RawMalloc(sizeof(wchar_t*) * argc);
+        for (i = 0; i < argc; i++) {
+            python_argv[i] = _Py_char2wchar(argv[i], NULL);
+        }
+
+        PySys_SetArgv(argc, python_argv);
+
+        // If other modules are using threads, we need to initialize them.
         PyEval_InitThreads();
 
         // Search and start main.py
-        const char * prog = [[[NSBundle mainBundle] pathForResource:@"app/{{ cookiecutter.app_name }}/main" ofType:@"py"] cStringUsingEncoding:NSUTF8StringEncoding];
+        const char* prog = [[[NSBundle mainBundle] pathForResource:@"app/{{ cookiecutter.app_name }}/main" ofType:@"py"] cStringUsingEncoding:NSUTF8StringEncoding];
         NSLog(@"Running %s", prog);
         FILE* fd = fopen(prog, "r");
         if (fd == NULL)
