@@ -18,8 +18,6 @@
 		60796F2C1919C70800A9926B /* Python.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60796F2B1919C70800A9926B /* Python.framework */; };
 		60796F39191CDBBA00A9926B /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60796F38191CDBBA00A9926B /* CoreFoundation.framework */; };
 		608C6CC91B3FF01D00BD512E /* OpenSSL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 608C6CC81B3FF01D00BD512E /* OpenSSL.framework */; };
-		608C6CCD1B3FF4DF00BD512E /* app in Resources */ = {isa = PBXBuildFile; fileRef = 608C6CCC1B3FF4DF00BD512E /* app */; };
-		60F0BAC0191FC868006EC268 /* app_packages in Resources */ = {isa = PBXBuildFile; fileRef = 60F0BABF191FC868006EC268 /* app_packages */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,8 +33,6 @@
 		60796F1819190FBB00A9926B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		60796F1F1919174D00A9926B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		60796F2B1919C70800A9926B /* Python.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Python.framework; sourceTree = "<group>"; };
-		60796F34191A76C400A9926B /* include */ = {isa = PBXFileReference; lastKnownFileType = folder; name = include; path = Python.framework/Resources/include; sourceTree = "<group>"; };
-		60796F35191A76C400A9926B /* lib */ = {isa = PBXFileReference; lastKnownFileType = folder; name = lib; path = Python.framework/Resources/lib; sourceTree = "<group>"; };
 		60796F38191CDBBA00A9926B /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		608C6CC81B3FF01D00BD512E /* OpenSSL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenSSL.framework; sourceTree = "<group>"; };
 		608C6CCC1B3FF4DF00BD512E /* app */ = {isa = PBXFileReference; lastKnownFileType = folder; path = app; sourceTree = SOURCE_ROOT; };
@@ -65,7 +61,6 @@
 		60796ED919190F4100A9926B = {
 			isa = PBXGroup;
 			children = (
-				60796F1A19190FEB00A9926B /* Python */,
 				60796EEB19190F4100A9926B /* {{ cookiecutter.app_name }} */,
 				60796EE419190F4100A9926B /* Frameworks */,
 				60796EE319190F4100A9926B /* Products */,
@@ -115,15 +110,6 @@
 				60796EF319190F4100A9926B /* {{ cookiecutter.app_name }}-Prefix.pch */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		60796F1A19190FEB00A9926B /* Python */ = {
-			isa = PBXGroup;
-			children = (
-				60796F34191A76C400A9926B /* include */,
-				60796F35191A76C400A9926B /* lib */,
-			);
-			name = Python;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,10 +165,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				608C6CCD1B3FF4DF00BD512E /* app in Resources */,
 				60796EF019190F4100A9926B /* InfoPlist.strings in Resources */,
 				60796EF819190F4100A9926B /* Images.xcassets in Resources */,
-				60F0BAC0191FC868006EC268 /* app_packages in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +185,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "rsync -pvtrL --exclude .hg --exclude .svn --exclude .git $PROJECT_DIR/Python.framework/Resources/lib $BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git $PROJECT_DIR/Python.framework/Resources/include $BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git $PROJECT_DIR/app $BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git $PROJECT_DIR/app_packages $BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH\n";
+			shellScript = "mkdir -p $BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Python.framework/Resources\nmkdir -p $BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Application\\ Support/org.python.$PROJECT_NAME\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git $PROJECT_DIR/Python.framework/Resources/lib $BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Python.framework/Resources\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git $PROJECT_DIR/Python.framework/Resources/include $BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Python.framework/Resources\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git $PROJECT_DIR/app $BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Application\\ Support/org.python.$PROJECT_NAME\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git $PROJECT_DIR/app_packages/ $BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Python.framework/Resources/lib/python`readlink $PROJECT_DIR/Python.framework/Versions/Current`/site-packages/\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

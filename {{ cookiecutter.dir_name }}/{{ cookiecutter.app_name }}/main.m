@@ -2,10 +2,6 @@
 //  main.m
 //  A main module for starting Python projects under iOS.
 //
-//  Copyright (c) 2014 Russell Keith-Magee.
-//  Released under the terms of the BSD license.
-//  Copyright (c) 2014 Russell Keith-Magee.
-//
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -15,35 +11,45 @@
 int main(int argc, char *argv[]) {
     int ret = 0;
     unsigned int i;
-    NSString *python_path;
-    wchar_t* python_home;
+    NSString *tmp_path;
+    NSString *python_home;
+    wchar_t *wpython_home;
+    const char* main_script;
     wchar_t** python_argv;
 
     @autoreleasepool {
+
         NSString * resourcePath = [[NSBundle mainBundle] resourcePath];
 
-        // Special environment to prefer .pyo, and don't write bytecode if .py are found
-        // because the process will not have write attribute on the device.
-        putenv("PYTHONOPTIMIZE=2");
+        // Special environment to prefer .pyo; also, don't write bytecode
+        // because the process will not have write permissions on the device.
+        putenv("PYTHONOPTIMIZE=1");
         putenv("PYTHONDONTWRITEBYTECODE=1");
-        putenv("PYTHONNOUSERSITE=1");
 
-        python_path = [NSString stringWithFormat:@"PYTHONPATH=%@/app:%@/app_packages",
-                       resourcePath, resourcePath, nil];
-        NSLog(@"%s", [python_path UTF8String]);
-        putenv((char *)[python_path UTF8String]);
+        python_home = [NSString stringWithFormat:@"%@/Library/Python.framework/Resources", resourcePath, nil];
+        NSLog(@"PythonHome is: %@", python_home);
+        wpython_home = _Py_char2wchar([python_home UTF8String], NULL);
+        Py_SetPythonHome(wpython_home);
 
-        NSLog(@"PythonHome is: %s", [resourcePath UTF8String]);
-        python_home = _Py_char2wchar([resourcePath cStringUsingEncoding:NSUTF8StringEncoding], NULL);
-        Py_SetPythonHome(python_home);
+        // iOS provides a specific directory for temp files.
+        tmp_path = [NSString stringWithFormat:@"TMP=%@/tmp", resourcePath, nil];
+        putenv((char *)[tmp_path UTF8String]);
 
         NSLog(@"Initializing Python runtime");
         Py_Initialize();
 
-        python_argv = PyMem_RawMalloc(sizeof(wchar_t*) * argc);
-        const char* main_script = [
-            [[NSBundle mainBundle] pathForResource:@"app/{{ cookiecutter.app_name }}/main"
+        // Set the name of the main script
+        main_script = [
+            [[NSBundle mainBundle] pathForResource:@"Library/Application Support/org.python.{{ cookiecutter.app_name }}/app/{{ cookiecutter.app_name }}/main"
                                             ofType:@"py"] cStringUsingEncoding:NSUTF8StringEncoding];
+
+        if (main_script == NULL) {
+            NSLog(@"Unable to locate app/{{ cookiecutter.app_name }}/main.py file");
+            exit(-1);
+        }
+
+        // Construct argv for the interpreter
+        python_argv = PyMem_RawMalloc(sizeof(wchar_t*) * argc);
 
         python_argv[0] = _Py_char2wchar(main_script, NULL);
         for (i = 1; i < argc; i++) {
@@ -55,34 +61,49 @@ int main(int argc, char *argv[]) {
         // If other modules are using threads, we need to initialize them.
         PyEval_InitThreads();
 
-        // Start main.py
+        // Start the main.py script
         NSLog(@"Running %s", main_script);
-        FILE* fd = fopen(main_script, "r");
-        if (fd == NULL)
-        {
-            ret = 1;
-            NSLog(@"Unable to open main.py, abort.");
-        }
-        else
-        {
-            ret = PyRun_SimpleFileEx(fd, main_script, 1);
-            if (ret != 0)
-            {
-                NSLog(@"Application quit abnormally!");
+
+        @try {
+            FILE* fd = fopen(main_script, "r");
+            if (fd == NULL) {
+                ret = 1;
+                NSLog(@"Unable to open main.py, abort.");
+            } else {
+                ret = PyRun_SimpleFileEx(fd, main_script, 1);
+                if (ret != 0) {
+                    NSLog(@"Application quit abnormally!");
+                } else {
+                    // In a normal iOS application, the following line is what
+                    // actually runs the application. It requires that the
+                    // Objective-C runtime environment has a class named
+                    // "PythonAppDelegate". This project doesn't define
+                    // one, because Objective-C bridging isn't something
+                    // Python does out of the box. You'll need to use
+                    // a library like Rubicon-ObjC [1], Pyobjus [2] or
+                    // PyObjC [3] if you want to run an *actual* iOS app.
+                    // [1] http://pybee.org/rubicon
+                    // [2] http://pyobjus.readthedocs.org/
+                    // [3] https://pythonhosted.org/pyobjc/
+
+                    UIApplicationMain(argc, argv, nil, @"PythonAppDelegate");
+                }
             }
         }
-
-        @try
-        {
-            // Start the Python app
-            UIApplicationMain(0, NULL, NULL, @"PythonAppDelegate");
+        @catch (NSException *exception) {
+            NSLog(@"Python runtime error: %@", [exception reason]);
         }
-        @catch (NSException *exception)
-        {
-            NSLog(@"Error running Python application: %@", exception.reason);
+        @finally {
+            Py_Finalize();
         }
 
-        Py_Finalize();
+        PyMem_RawFree(wpython_home);
+        if (python_argv) {
+            for (i = 0; i < argc; i++) {
+                PyMem_RawFree(python_argv[i]);
+            }
+            PyMem_RawFree(python_argv);
+        }
         NSLog(@"Leaving");
     }
 

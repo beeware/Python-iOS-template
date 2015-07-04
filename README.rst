@@ -38,13 +38,15 @@ directory structure that looks something like::
                 __init__.py
                 main.py
         app_packages/
-        ffi.framework/
+        OpenSSL.framework/
             ...
         Python.framework/
             ...
         myproject/
             ...
         myproject.xcodeproj/
+            ...
+
 
 You're now ready to open the XCode project file, build and run your project!
 
@@ -96,7 +98,7 @@ links in the project source::
         setup.py
 
 .. _cookiecutter: http://github.com/audreyr/cookiecutter
-.. _Download the Python iOS support package: https://github.com/pybee/Python-iOS-support/releases/download/3.4.2-b1/Python-3.4.2-iOS-support.b1.tar.gz
+.. _Download the Python iOS support package: https://github.com/pybee/Python-iOS-support/releases/download/3.4.2-b2/Python-3.4.2-iOS-support.b2.tar.gz
 .. _Python-iOS-support: http://github.com/pybee/Python-iOS-support
 .. _toga: http://pybee.org/toga
 .. _Rubicon: http://github.com/pybee/rubicon-objc
