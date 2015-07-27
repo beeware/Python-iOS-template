@@ -2,8 +2,7 @@
     "app_name": "appname",
     "formal_name": "App Name",
     "dir_name": "iOS",
-    "organization": "Example Corp",
-    "organization_id": "com.example",
+    "bundle": "com.example",
     "year": "2015",
-    "month": "June"
+    "month": "July"
 }
