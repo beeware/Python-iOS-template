@@ -40,11 +40,11 @@ int main(int argc, char *argv[]) {
 
         // Set the name of the main script
         main_script = [
-            [[NSBundle mainBundle] pathForResource:@"Library/Application Support/org.python.{{ cookiecutter.app_name }}/app/{{ cookiecutter.app_name }}/main"
+            [[NSBundle mainBundle] pathForResource:@"Library/Application Support/org.python.{{ cookiecutter.app_name }}/app/{{ cookiecutter.app_name }}/__main__"
                                             ofType:@"py"] cStringUsingEncoding:NSUTF8StringEncoding];
 
         if (main_script == NULL) {
-            NSLog(@"Unable to locate app/{{ cookiecutter.app_name }}/main.py file");
+            NSLog(@"Unable to locate {{ cookiecutter.app_name }} main module file");
             exit(-1);
         }
 
