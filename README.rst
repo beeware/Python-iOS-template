@@ -98,7 +98,7 @@ links in the project source::
         setup.py
 
 .. _cookiecutter: http://github.com/audreyr/cookiecutter
-.. _Download the Python iOS support package: https://github.com/pybee/Python-iOS-support/releases/download/3.4.2-b3/Python-3.4.2-iOS-support.b3.tar.gz
+.. _Download the Python iOS support package: https://github.com/pybee/Python-iOS-support/releases/download/3.4.2-b4/Python-3.4.2-iOS-support.b4.tar.gz
 .. _Python-iOS-support: http://github.com/pybee/Python-iOS-support
 .. _toga: http://pybee.org/toga
 .. _Rubicon: http://github.com/pybee/rubicon-objc
