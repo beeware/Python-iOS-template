@@ -7,20 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6023B23D1C27D20F006F2562 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6023B23C1C27D20F006F2562 /* libsqlite3.tbd */; };
+		6023B23F1C27D218006F2562 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6023B23E1C27D218006F2562 /* libz.tbd */; };
 		60796EE619190F4100A9926B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60796EE519190F4100A9926B /* Foundation.framework */; };
 		60796EE819190F4100A9926B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60796EE719190F4100A9926B /* CoreGraphics.framework */; };
 		60796EEA19190F4100A9926B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60796EE919190F4100A9926B /* UIKit.framework */; };
 		60796EF019190F4100A9926B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 60796EEE19190F4100A9926B /* InfoPlist.strings */; };
 		60796EF219190F4100A9926B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60796EF119190F4100A9926B /* main.m */; };
 		60796EF819190F4100A9926B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60796EF719190F4100A9926B /* Images.xcassets */; };
-		60796F1919190FBB00A9926B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 60796F1819190FBB00A9926B /* libz.dylib */; };
-		60796F201919174D00A9926B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 60796F1F1919174D00A9926B /* libsqlite3.dylib */; };
 		60796F2C1919C70800A9926B /* Python.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60796F2B1919C70800A9926B /* Python.framework */; };
 		60796F39191CDBBA00A9926B /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60796F38191CDBBA00A9926B /* CoreFoundation.framework */; };
 		608C6CC91B3FF01D00BD512E /* OpenSSL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 608C6CC81B3FF01D00BD512E /* OpenSSL.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6023B23C1C27D20F006F2562 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		6023B23E1C27D218006F2562 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		60796EE219190F4100A9926B /* {{ cookiecutter.app_name }}.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = {{ cookiecutter.app_name }}.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60796EE519190F4100A9926B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		60796EE719190F4100A9926B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -30,8 +32,6 @@
 		60796EF119190F4100A9926B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		60796EF319190F4100A9926B /* {{ cookiecutter.app_name }}-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "{{ cookiecutter.app_name }}-Prefix.pch"; sourceTree = "<group>"; };
 		60796EF719190F4100A9926B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		60796F1819190FBB00A9926B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		60796F1F1919174D00A9926B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		60796F2B1919C70800A9926B /* Python.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Python.framework; sourceTree = "<group>"; };
 		60796F38191CDBBA00A9926B /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		608C6CC81B3FF01D00BD512E /* OpenSSL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenSSL.framework; sourceTree = "<group>"; };
@@ -44,11 +44,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6023B23F1C27D218006F2562 /* libz.tbd in Frameworks */,
+				6023B23D1C27D20F006F2562 /* libsqlite3.tbd in Frameworks */,
 				608C6CC91B3FF01D00BD512E /* OpenSSL.framework in Frameworks */,
 				60796F39191CDBBA00A9926B /* CoreFoundation.framework in Frameworks */,
 				60796F2C1919C70800A9926B /* Python.framework in Frameworks */,
-				60796F201919174D00A9926B /* libsqlite3.dylib in Frameworks */,
-				60796F1919190FBB00A9926B /* libz.dylib in Frameworks */,
 				60796EE819190F4100A9926B /* CoreGraphics.framework in Frameworks */,
 				60796EEA19190F4100A9926B /* UIKit.framework in Frameworks */,
 				60796EE619190F4100A9926B /* Foundation.framework in Frameworks */,
@@ -78,8 +78,8 @@
 		60796EE419190F4100A9926B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				60796F1F1919174D00A9926B /* libsqlite3.dylib */,
-				60796F1819190FBB00A9926B /* libz.dylib */,
+				6023B23E1C27D218006F2562 /* libz.tbd */,
+				6023B23C1C27D20F006F2562 /* libsqlite3.tbd */,
 				60796F38191CDBBA00A9926B /* CoreFoundation.framework */,
 				60796EE719190F4100A9926B /* CoreGraphics.framework */,
 				60796EE519190F4100A9926B /* Foundation.framework */,
@@ -140,7 +140,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = Py;
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "{{ cookiecutter.organization }}";
 			};
 			buildConfigurationList = 60796EDD19190F4100A9926B /* Build configuration list for PBXProject "{{ cookiecutter.app_name }}" */;
@@ -185,7 +185,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "mkdir -p $BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Python.framework/Resources\nmkdir -p $BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Application\\ Support/org.python.$PROJECT_NAME\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git $PROJECT_DIR/Python.framework/Resources/lib $BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Python.framework/Resources\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git $PROJECT_DIR/Python.framework/Resources/include $BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Python.framework/Resources\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git $PROJECT_DIR/app $BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Application\\ Support/org.python.$PROJECT_NAME\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git $PROJECT_DIR/app_packages/ $BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Python.framework/Resources/lib/python`readlink $PROJECT_DIR/Python.framework/Versions/Current`/site-packages/\n";
+			shellScript = "mkdir -p $BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Python.framework/Resources\nmkdir -p $BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Application\\ Support/org.python.$PROJECT_NAME\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git $PROJECT_DIR/Python.framework/Resources/lib $BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Python.framework/Resources\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git $PROJECT_DIR/Python.framework/Resources/include $BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Python.framework/Resources\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git $PROJECT_DIR/app $BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Application\\ Support/org.python.$PROJECT_NAME\nmkdir -p $BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Python.framework/Resources/lib/python`readlink $PROJECT_DIR/Python.framework/Versions/Current`/site-packages/\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git $PROJECT_DIR/app_packages/ $BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Python.framework/Resources/lib/python`readlink $PROJECT_DIR/Python.framework/Versions/Current`/site-packages/\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -230,6 +230,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -301,6 +302,7 @@
 					"\"$(PROJECT_DIR)/Python.framework/Resources/include/python2.7\"",
 				);
 				INFOPLIST_FILE = "{{ cookiecutter.app_name }}/{{ cookiecutter.app_name }}-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = “{{ cookiecutter.bundle }}.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = include/python2.7;
 				WRAPPER_EXTENSION = app;
@@ -324,6 +326,7 @@
 					"\"$(PROJECT_DIR)/Python.framework/Resources/include/python2.7\"",
 				);
 				INFOPLIST_FILE = "{{ cookiecutter.app_name }}/{{ cookiecutter.app_name }}-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = “{{ cookiecutter.bundle }}.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = include/python2.7;
 				WRAPPER_EXTENSION = app;
