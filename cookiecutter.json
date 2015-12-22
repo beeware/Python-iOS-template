@@ -1,6 +1,7 @@
 {
     "app_name": "appname",
     "formal_name": "App Name",
+    "organization_name": "Example Corporation",
     "dir_name": "iOS",
     "bundle": "com.example",
     "year": "2015",

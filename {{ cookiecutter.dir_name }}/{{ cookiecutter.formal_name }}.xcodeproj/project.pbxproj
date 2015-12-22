@@ -9,34 +9,34 @@
 /* Begin PBXBuildFile section */
 		6023B23D1C27D20F006F2562 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6023B23C1C27D20F006F2562 /* libsqlite3.tbd */; };
 		6023B23F1C27D218006F2562 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6023B23E1C27D218006F2562 /* libz.tbd */; };
-		60796EE619190F4100A9926B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60796EE519190F4100A9926B /* Foundation.framework */; };
+		608C6CC91B3FF01D00BD512E /* OpenSSL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 608C6CC81B3FF01D00BD512E /* OpenSSL.framework */; };
+		60796F2C1919C70800A9926B /* Python.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60796F2B1919C70800A9926B /* Python.framework */; };
 		60796EE819190F4100A9926B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60796EE719190F4100A9926B /* CoreGraphics.framework */; };
+		60796F39191CDBBA00A9926B /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60796F38191CDBBA00A9926B /* CoreFoundation.framework */; };
+		60796EE619190F4100A9926B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60796EE519190F4100A9926B /* Foundation.framework */; };
 		60796EEA19190F4100A9926B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60796EE919190F4100A9926B /* UIKit.framework */; };
 		60796EF019190F4100A9926B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 60796EEE19190F4100A9926B /* InfoPlist.strings */; };
 		60796EF219190F4100A9926B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60796EF119190F4100A9926B /* main.m */; };
 		60796EF819190F4100A9926B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60796EF719190F4100A9926B /* Images.xcassets */; };
-		60796F2C1919C70800A9926B /* Python.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60796F2B1919C70800A9926B /* Python.framework */; };
-		60796F39191CDBBA00A9926B /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60796F38191CDBBA00A9926B /* CoreFoundation.framework */; };
-		608C6CC91B3FF01D00BD512E /* OpenSSL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 608C6CC81B3FF01D00BD512E /* OpenSSL.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6023B23C1C27D20F006F2562 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		6023B23E1C27D218006F2562 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		60796EE219190F4100A9926B /* {{ cookiecutter.app_name }}.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = {{ cookiecutter.app_name }}.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		60796EE519190F4100A9926B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		60796EE719190F4100A9926B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		60796EE919190F4100A9926B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		60796EED19190F4100A9926B /* {{ cookiecutter.app_name }}-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "{{ cookiecutter.app_name }}-Info.plist"; sourceTree = "<group>"; };
-		60796EEF19190F4100A9926B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		60796EF119190F4100A9926B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		60796EF319190F4100A9926B /* {{ cookiecutter.app_name }}-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "{{ cookiecutter.app_name }}-Prefix.pch"; sourceTree = "<group>"; };
-		60796EF719190F4100A9926B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		608C6CC81B3FF01D00BD512E /* OpenSSL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenSSL.framework; sourceTree = "<group>"; };
 		60796F2B1919C70800A9926B /* Python.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Python.framework; sourceTree = "<group>"; };
 		60796F38191CDBBA00A9926B /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
-		608C6CC81B3FF01D00BD512E /* OpenSSL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenSSL.framework; sourceTree = "<group>"; };
+		60796EE719190F4100A9926B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		60796EE519190F4100A9926B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		60796EE919190F4100A9926B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		608C6CCC1B3FF4DF00BD512E /* app */ = {isa = PBXFileReference; lastKnownFileType = folder; path = app; sourceTree = SOURCE_ROOT; };
 		60F0BABF191FC868006EC268 /* app_packages */ = {isa = PBXFileReference; lastKnownFileType = folder; path = app_packages; sourceTree = SOURCE_ROOT; };
+		60796EF119190F4100A9926B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		60796EE219190F4100A9926B /* {{ cookiecutter.formal_name }}.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "{{ cookiecutter.formal_name }}.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		60796EED19190F4100A9926B /* {{ cookiecutter.app_name }}-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "{{ cookiecutter.app_name }}-Info.plist"; sourceTree = "<group>"; };
+		60796EEF19190F4100A9926B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		60796EF319190F4100A9926B /* {{ cookiecutter.app_name }}-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "{{ cookiecutter.app_name }}-Prefix.pch"; sourceTree = "<group>"; };
+		60796EF719190F4100A9926B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,11 +47,11 @@
 				6023B23F1C27D218006F2562 /* libz.tbd in Frameworks */,
 				6023B23D1C27D20F006F2562 /* libsqlite3.tbd in Frameworks */,
 				608C6CC91B3FF01D00BD512E /* OpenSSL.framework in Frameworks */,
-				60796F39191CDBBA00A9926B /* CoreFoundation.framework in Frameworks */,
 				60796F2C1919C70800A9926B /* Python.framework in Frameworks */,
+				60796F39191CDBBA00A9926B /* CoreFoundation.framework in Frameworks */,
 				60796EE819190F4100A9926B /* CoreGraphics.framework in Frameworks */,
-				60796EEA19190F4100A9926B /* UIKit.framework in Frameworks */,
 				60796EE619190F4100A9926B /* Foundation.framework in Frameworks */,
+				60796EEA19190F4100A9926B /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,7 +70,7 @@
 		60796EE319190F4100A9926B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				60796EE219190F4100A9926B /* {{ cookiecutter.app_name }}.app */,
+				60796EE219190F4100A9926B /* {{ cookiecutter.formal_name }}.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -78,13 +78,13 @@
 		60796EE419190F4100A9926B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6023B23E1C27D218006F2562 /* libz.tbd */,
 				6023B23C1C27D20F006F2562 /* libsqlite3.tbd */,
+				6023B23E1C27D218006F2562 /* libz.tbd */,
+				608C6CC81B3FF01D00BD512E /* OpenSSL.framework */,
+				60796F2B1919C70800A9926B /* Python.framework */,
 				60796F38191CDBBA00A9926B /* CoreFoundation.framework */,
 				60796EE719190F4100A9926B /* CoreGraphics.framework */,
 				60796EE519190F4100A9926B /* Foundation.framework */,
-				608C6CC81B3FF01D00BD512E /* OpenSSL.framework */,
-				60796F2B1919C70800A9926B /* Python.framework */,
 				60796EE919190F4100A9926B /* UIKit.framework */,
 			);
 			name = Frameworks;
@@ -115,9 +115,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		60796EE119190F4100A9926B /* {{ cookiecutter.app_name }} */ = {
+		60796EE119190F4100A9926B /* {{ cookiecutter.formal_name }} */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 60796F0E19190F4100A9926B /* Build configuration list for PBXNativeTarget "{{ cookiecutter.app_name }}" */;
+			buildConfigurationList = 60796F0E19190F4100A9926B /* Build configuration list for PBXNativeTarget "{{ cookiecutter.formal_name }}" */;
 			buildPhases = (
 				60796F2F1919C7E700A9926B /* Refresh Python source */,
 				60796EDE19190F4100A9926B /* Sources */,
@@ -128,9 +128,9 @@
 			);
 			dependencies = (
 			);
-			name = {{ cookiecutter.app_name }};
+			name = "{{ cookiecutter.formal_name }}";
 			productName = {{ cookiecutter.app_name }};
-			productReference = 60796EE219190F4100A9926B /* {{ cookiecutter.app_name }}.app */;
+			productReference = 60796EE219190F4100A9926B /* {{ cookiecutter.formal_name }}.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -139,11 +139,10 @@
 		60796EDA19190F4100A9926B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = Py;
 				LastUpgradeCheck = 0720;
-				ORGANIZATIONNAME = "{{ cookiecutter.organization }}";
+				ORGANIZATIONNAME = "{{ cookiecutter.organization_name }}";
 			};
-			buildConfigurationList = 60796EDD19190F4100A9926B /* Build configuration list for PBXProject "{{ cookiecutter.app_name }}" */;
+			buildConfigurationList = 60796EDD19190F4100A9926B /* Build configuration list for PBXProject "{{ cookiecutter.formal_name }}" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -155,7 +154,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				60796EE119190F4100A9926B /* {{ cookiecutter.app_name }} */,
+				60796EE119190F4100A9926B /* {{ cookiecutter.forma_name }} */,
 			);
 		};
 /* End PBXProject section */
@@ -185,7 +184,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "mkdir -p $BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Python.framework/Resources\nmkdir -p $BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Application\\ Support/org.python.$PROJECT_NAME\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git $PROJECT_DIR/Python.framework/Resources/lib $BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Python.framework/Resources\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git $PROJECT_DIR/Python.framework/Resources/include $BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Python.framework/Resources\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git $PROJECT_DIR/app $BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Application\\ Support/org.python.$PROJECT_NAME\nmkdir -p $BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Python.framework/Resources/lib/python`readlink $PROJECT_DIR/Python.framework/Versions/Current`/site-packages/\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git $PROJECT_DIR/app_packages/ $BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Python.framework/Resources/lib/python`readlink $PROJECT_DIR/Python.framework/Versions/Current`/site-packages/\n";
+			shellScript = "mkdir -p \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Python.framework/Resources\"\nmkdir -p \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Application Support/{{ cookiecutter.bundle }}.{{ cookiecutter.app_name }}\"\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git \"$PROJECT_DIR/Python.framework/Resources/lib\" \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Python.framework/Resources\"\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git \"$PROJECT_DIR/Python.framework/Resources/include\" \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Python.framework/Resources\"\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git \"$PROJECT_DIR/app\" \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Application Support/{{ cookiecutter.bundle }}.{{ cookiecutter.app_name }}\"\nmkdir -p \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Python.framework/Resources/lib/python`readlink $PROJECT_DIR/Python.framework/Versions/Current`/site-packages/\"\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git \"$PROJECT_DIR/app_packages/\" \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Python.framework/Resources/lib/python`readlink $PROJECT_DIR/Python.framework/Versions/Current`/site-packages/\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -328,7 +327,6 @@
 				INFOPLIST_FILE = "{{ cookiecutter.app_name }}/{{ cookiecutter.app_name }}-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "{{ cookiecutter.bundle }}.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = include/python2.7;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -336,7 +334,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		60796EDD19190F4100A9926B /* Build configuration list for PBXProject "{{ cookiecutter.app_name }}" */ = {
+		60796EDD19190F4100A9926B /* Build configuration list for PBXProject "{{ cookiecutter.formal_name }}" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				60796F0C19190F4100A9926B /* Debug */,
@@ -345,7 +343,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		60796F0E19190F4100A9926B /* Build configuration list for PBXNativeTarget "{{ cookiecutter.app_name }}" */ = {
+		60796F0E19190F4100A9926B /* Build configuration list for PBXNativeTarget "{{ cookiecutter.formal_name }}" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				60796F0F19190F4100A9926B /* Debug */,
