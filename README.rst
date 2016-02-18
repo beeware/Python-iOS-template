@@ -1,7 +1,7 @@
 Python iOS Template
 ===================
 
-A template for building Python apps that will run under iOS.
+A template for building Python 3.5.1 apps that will run under iOS.
 
 Using this template
 -------------------

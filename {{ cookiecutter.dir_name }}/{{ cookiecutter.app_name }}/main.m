@@ -28,7 +28,7 @@ int main(int argc, char *argv[]) {
 
         python_home = [NSString stringWithFormat:@"%@/Library/Python.framework/Resources", resourcePath, nil];
         NSLog(@"PythonHome is: %@", python_home);
-        wpython_home = _Py_char2wchar([python_home UTF8String], NULL);
+        wpython_home = Py_DecodeLocale([python_home UTF8String], NULL);
         Py_SetPythonHome(wpython_home);
 
         // iOS provides a specific directory for temp files.
@@ -51,9 +51,9 @@ int main(int argc, char *argv[]) {
         // Construct argv for the interpreter
         python_argv = PyMem_RawMalloc(sizeof(wchar_t*) * argc);
 
-        python_argv[0] = _Py_char2wchar(main_script, NULL);
+        python_argv[0] = Py_DecodeLocale(main_script, NULL);
         for (i = 1; i < argc; i++) {
-            python_argv[i] = _Py_char2wchar(argv[i], NULL);
+            python_argv[i] = Py_DecodeLocale(argv[i], NULL);
         }
 
         PySys_SetArgv(argc, python_argv);
