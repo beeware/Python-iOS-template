@@ -154,7 +154,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				60796EE119190F4100A9926B /* {{ cookiecutter.forma_name }} */,
+				60796EE119190F4100A9926B /* {{ cookiecutter.formal_name }} */,
 			);
 		};
 /* End PBXProject section */
