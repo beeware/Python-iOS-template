@@ -1,0 +1,8 @@
+*.py[cod]
+
+# Created during tests
+.cache/
+
+# Unit test / coverage reports
+.coverage
+.tox
