@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6023B23D1C27D20F006F2562 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6023B23C1C27D20F006F2562 /* libsqlite3.tbd */; };
 		6023B23F1C27D218006F2562 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6023B23E1C27D218006F2562 /* libz.tbd */; };
+		607B9A7C1D2D539E0003ED50 /* BZip2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 607B9A7B1D2D539E0003ED50 /* BZip2.framework */; };
 		608C6CC91B3FF01D00BD512E /* OpenSSL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 608C6CC81B3FF01D00BD512E /* OpenSSL.framework */; };
 		60796F2C1919C70800A9926B /* Python.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60796F2B1919C70800A9926B /* Python.framework */; };
 		60796EE819190F4100A9926B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60796EE719190F4100A9926B /* CoreGraphics.framework */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		6023B23C1C27D20F006F2562 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		6023B23E1C27D218006F2562 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		607B9A7B1D2D539E0003ED50 /* BZip2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BZip2.framework; sourceTree = "<group>"; };
 		608C6CC81B3FF01D00BD512E /* OpenSSL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenSSL.framework; sourceTree = "<group>"; };
 		60796F2B1919C70800A9926B /* Python.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Python.framework; sourceTree = "<group>"; };
 		60796F38191CDBBA00A9926B /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
@@ -46,6 +48,7 @@
 			files = (
 				6023B23F1C27D218006F2562 /* libz.tbd in Frameworks */,
 				6023B23D1C27D20F006F2562 /* libsqlite3.tbd in Frameworks */,
+				607B9A7C1D2D539E0003ED50 /* BZip2.framework in Frameworks */,
 				608C6CC91B3FF01D00BD512E /* OpenSSL.framework in Frameworks */,
 				60796F2C1919C70800A9926B /* Python.framework in Frameworks */,
 				60796F39191CDBBA00A9926B /* CoreFoundation.framework in Frameworks */,
@@ -80,6 +83,7 @@
 			children = (
 				6023B23C1C27D20F006F2562 /* libsqlite3.tbd */,
 				6023B23E1C27D218006F2562 /* libz.tbd */,
+				607B9A7B1D2D539E0003ED50 /* BZip2.framework */,
 				608C6CC81B3FF01D00BD512E /* OpenSSL.framework */,
 				60796F2B1919C70800A9926B /* Python.framework */,
 				60796F38191CDBBA00A9926B /* CoreFoundation.framework */,
