@@ -1,7 +1,10 @@
 Python iOS Template
 ===================
 
-A template for building Python 3.5 apps that will run under iOS.
+A template for building Python apps that will run under iOS.
+
+**This repository branch contains a template for Python 3.5**.
+Other Python versions are available by cloning other branches of repository.
 
 Using this template
 -------------------
@@ -13,16 +16,20 @@ Using this template
 
 2. Run ``cookiecutter`` on the Python-iOS template::
 
-    $ cookiecutter https://github.com/pybee/Python-iOS-template
+    $ cookiecutter https://github.com/pybee/Python-iOS-template --checkout 3.5
 
-3. `Download the Python iOS support package`_, and extract it. This
-   will give you two frameworks.
+3. `Download the Python Apple support package for iOS`_, and extract it. This
+   will give you four frameworks.
+
+   * ``BZip2.framework``
 
    * ``OpenSSL.framework``
 
+   * ``XZ.framework``
+
    * ``Python.framework``
 
-   Alternatively, you can download the `Python-iOS-support`_ project, and
+   Alternatively, you can download the `Python-Apple-support`_ project, and
    build your own versions of these frameworks.
 
    These framework directories should be placed in the same directory as
@@ -38,9 +45,14 @@ directory structure that looks something like::
                 __init__.py
                 main.py
         app_packages/
+            ...
+        BZip2.framework/
+            ...
         OpenSSL.framework/
             ...
         Python.framework/
+            ...
+        XZ.framework/
             ...
         myproject/
             ...
@@ -98,7 +110,7 @@ links in the project source::
         setup.py
 
 .. _cookiecutter: http://github.com/audreyr/cookiecutter
-.. _Download the Python iOS support package: https://github.com/pybee/Python-iOS-support/releases/download/3.4.2-b4/Python-3.4.2-iOS-support.b4.tar.gz
-.. _Python-iOS-support: http://github.com/pybee/Python-iOS-support
+.. _Download the Python Apple support package for iOS: https://github.com/pybee/Python-Apple-support/releases/download/3.5-b1/Python-3.5-iOS-support.b1.tar.gz
+.. _Python-Apple-support: http://github.com/pybee/Python-Apple-support
 .. _toga: http://pybee.org/toga
 .. _Rubicon: http://github.com/pybee/rubicon-objc

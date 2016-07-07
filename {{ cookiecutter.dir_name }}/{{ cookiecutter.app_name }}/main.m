@@ -40,7 +40,7 @@ int main(int argc, char *argv[]) {
 
         // Set the name of the main script
         main_script = [
-                       [[NSBundle mainBundle] pathForResource:@"Library/Application Support/{{ cookiecutter.bundle }}.{{ cookiecutter.app_name }}/app/{{ cookiecutter.app_name }}/__main__"
+                       [[NSBundle mainBundle] pathForResource:@"Library/Application Support/{{ cookiecutter.bundle }}.{{ cookiecutter.app_name }}/app/{{ cookiecutter.app_name }}/app”
                                                        ofType:@"py"] cStringUsingEncoding:NSUTF8StringEncoding];
 
         if (main_script == NULL) {
