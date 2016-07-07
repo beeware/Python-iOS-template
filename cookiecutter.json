@@ -3,7 +3,5 @@
     "formal_name": "App Name",
     "organization_name": "Example Corporation",
     "dir_name": "iOS",
-    "bundle": "com.example",
-    "year": "2015",
-    "month": "July"
+    "bundle": "com.example"
 }
