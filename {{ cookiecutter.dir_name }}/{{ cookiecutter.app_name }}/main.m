@@ -13,22 +13,20 @@ int main(int argc, char *argv[]) {
     unsigned int i;
     NSString *tmp_path;
     NSString *python_home;
-    wchar_t *wpython_home;
+    char *wpython_home;
     const char* main_script;
-    wchar_t** python_argv;
-
+    char** python_argv;
     @autoreleasepool {
 
         NSString * resourcePath = [[NSBundle mainBundle] resourcePath];
 
-        // Special environment to prefer .pyo; also, don't write bytecode
-        // because the process will not have write permissions on the device.
-        putenv("PYTHONOPTIMIZE=1");
+        // Special environment to avoid writing bytecode because
+        // the process will not have write attribute on the device.
         putenv("PYTHONDONTWRITEBYTECODE=1");
 
         python_home = [NSString stringWithFormat:@"%@/Library/Python.framework/Resources", resourcePath, nil];
         NSLog(@"PythonHome is: %@", python_home);
-        wpython_home = _Py_char2wchar([python_home UTF8String], NULL);
+        wpython_home = strdup([python_home UTF8String]);
         Py_SetPythonHome(wpython_home);
 
         // iOS provides a specific directory for temp files.
@@ -44,16 +42,17 @@ int main(int argc, char *argv[]) {
                                                        ofType:@"py"] cStringUsingEncoding:NSUTF8StringEncoding];
 
         if (main_script == NULL) {
-            NSLog(@"Unable to locate {{ cookiecutter.app_name }} main module file");
+            NSLog(@"Unable to locate {{ cookiecutter.app_name }} app module file");
             exit(-1);
         }
 
         // Construct argv for the interpreter
-        python_argv = PyMem_RawMalloc(sizeof(wchar_t*) * argc);
+        python_argv = PyMem_Malloc(sizeof(char *) * argc);
 
-        python_argv[0] = _Py_char2wchar(main_script, NULL);
+
+        python_argv[0] = strdup(main_script);
         for (i = 1; i < argc; i++) {
-            python_argv[i] = _Py_char2wchar(argv[i], NULL);
+            python_argv[i] = argv[i];
         }
 
         PySys_SetArgv(argc, python_argv);
@@ -97,12 +96,12 @@ int main(int argc, char *argv[]) {
             Py_Finalize();
         }
 
-        PyMem_RawFree(wpython_home);
+        PyMem_Free(wpython_home);
         if (python_argv) {
             for (i = 0; i < argc; i++) {
-                PyMem_RawFree(python_argv[i]);
+                PyMem_Free(python_argv[i]);
             }
-            PyMem_RawFree(python_argv);
+            PyMem_Free(python_argv);
         }
         NSLog(@"Leaving");
     }
