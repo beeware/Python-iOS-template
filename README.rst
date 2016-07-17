@@ -6,9 +6,6 @@ A template for building Python apps that will run under iOS.
 **This repository branch contains a template for Python 3.4**.
 Other Python versions are available by cloning other branches of repository.
 
-The simplest way to use this template is with `Briefcase`_. However, you can
-use this template manually if you want.
-
 Using this template
 -------------------
 
@@ -129,7 +126,6 @@ links in the project source::
             other.py
         setup.py
 
-.. _Briefcase: http://pybee.org/project/projects/tools/briefcase
 .. _cookiecutter: https://github.com/audreyr/cookiecutter
 .. _Download the Python Apple support package for iOS: https://github.com/pybee/Python-Apple-support/releases/download/3.4-b1/Python-3.4-iOS-support.b1.tar.gz
 .. _Python-Apple-support: http://github.com/pybee/Python-Apple-support
