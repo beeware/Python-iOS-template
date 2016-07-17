@@ -6,11 +6,18 @@ A template for building Python apps that will run under iOS.
 **This repository branch contains a template for Python 2.7**.
 Other Python versions are available by cloning other branches of repository.
 
-The simplest way to use this template is with `Briefcase`_. However, you can 
+The simplest way to use this template is with `Briefcase`_. However, you can
 use this template manually if you want.
 
 Using this template
 -------------------
+
+The easiest way to use this project is to not use it at all - at least,
+not directly. `Briefcase <https://github.com/pybee/briefcase/>`__ is a
+tool that uses this template, rolling it out using data extracted from
+your ``setup.py``.
+
+However, if you *do* want use this template directly...
 
 1. Install `cookiecutter`_. This is a tool used to bootstrap complex project
    templates::
@@ -42,7 +49,7 @@ Using this template
    If ``<app name>`` contains a dash, it will be
    converted to an underscore in the expected package name
 
-   If your code has any dependencies, they should be installed under the 
+   If your code has any dependencies, they should be installed under the
    ``app_packages`` directory.
 
 
