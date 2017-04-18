@@ -13,6 +13,7 @@ int main(int argc, char *argv[]) {
     unsigned int i;
     NSString *tmp_path;
     NSString *python_home;
+    NSString *python_path;
     wchar_t *wpython_home;
     const char* main_script;
     wchar_t** python_argv;
@@ -26,10 +27,16 @@ int main(int argc, char *argv[]) {
         putenv("PYTHONOPTIMIZE=1");
         putenv("PYTHONDONTWRITEBYTECODE=1");
 
+        // Set the home for the Python interpreter
         python_home = [NSString stringWithFormat:@"%@/Library/Python.framework/Resources", resourcePath, nil];
         NSLog(@"PythonHome is: %@", python_home);
         wpython_home = _Py_char2wchar([python_home UTF8String], NULL);
         Py_SetPythonHome(wpython_home);
+
+        // Set the PYTHONPATH
+        python_path = [NSString stringWithFormat:@"PYTHONPATH=%@/Library/Application Support/{{ cookiecutter.bundle }}.{{ cookiecutter.app_name }}/app:%@/Library/Application Support/{{ cookiecutter.bundle }}.{{ cookiecutter.app_name }}/app_packages", resourcePath, resourcePath, nil];
+        NSLog(@"PYTHONPATH is: %@", python_path);
+        putenv((char *)[python_path UTF8String]);
 
         // iOS provides a specific directory for temp files.
         tmp_path = [NSString stringWithFormat:@"TMP=%@/tmp", resourcePath, nil];
