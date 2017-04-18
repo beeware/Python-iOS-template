@@ -13,6 +13,7 @@ int main(int argc, char *argv[]) {
     unsigned int i;
     NSString *tmp_path;
     NSString *python_home;
+    NSString *python_path;
     char *wpython_home;
     const char* main_script;
     char** python_argv;
@@ -24,10 +25,16 @@ int main(int argc, char *argv[]) {
         // the process will not have write attribute on the device.
         putenv("PYTHONDONTWRITEBYTECODE=1");
 
+        // Set the home for the Python interpreter
         python_home = [NSString stringWithFormat:@"%@/Library/Python.framework/Resources", resourcePath, nil];
         NSLog(@"PythonHome is: %@", python_home);
         wpython_home = strdup([python_home UTF8String]);
         Py_SetPythonHome(wpython_home);
+
+        // Set the PYTHONPATH
+        python_path = [NSString stringWithFormat:@"PYTHONPATH=%@/Library/Application Support/{{ cookiecutter.bundle }}.{{ cookiecutter.app_name }}/app:%@/Library/Application Support/{{ cookiecutter.bundle }}.{{ cookiecutter.app_name }}/app_packages", resourcePath, resourcePath, nil];
+        NSLog(@"PYTHONPATH is: %@", python_path);
+        putenv((char *)[python_path UTF8String]);
 
         // iOS provides a specific directory for temp files.
         tmp_path = [NSString stringWithFormat:@"TMP=%@/tmp", resourcePath, nil];
@@ -48,7 +55,6 @@ int main(int argc, char *argv[]) {
 
         // Construct argv for the interpreter
         python_argv = PyMem_Malloc(sizeof(char *) * argc);
-
 
         python_argv[0] = strdup(main_script);
         for (i = 1; i < argc; i++) {
