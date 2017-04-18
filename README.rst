@@ -26,11 +26,13 @@ However, if you *do* want use this template directly...
     $ cookiecutter https://github.com/pybee/Python-iOS-template --checkout 2.7
 
 3. `Download the Python Apple support package for iOS`_, and extract it. This
-   will give you three frameworks.
+   will give you four frameworks.
 
    * ``BZip2.framework``
 
    * ``OpenSSL.framework``
+
+   * ``XZ.framework``
 
    * ``Python.framework``
 
@@ -66,6 +68,8 @@ looks something like::
         OpenSSL.framework/
             ...
         Python.framework/
+            ...
+        XZ.framework/
             ...
         myproject/
             ...
