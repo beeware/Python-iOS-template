@@ -3,6 +3,11 @@ Python iOS Template
 
 A template for building Python apps that will run under iOS.
 
+The easiest way to use this project is to not use it at all - at least,
+not directly. `Briefcase <https://github.com/pybee/briefcase/>`__ is a
+tool that uses this template, rolling it out using data extracted from
+your ``setup.py``.
+
 The master branch of this repository has no content; there is an
 independent branch for each supported version of Python. The following
 Python versions are supported:
