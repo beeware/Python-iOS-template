@@ -15,5 +15,7 @@ Python versions are supported:
 * `Python 2.7 <https://github.com/pybee/Python-iOS-template/tree/2.7>`__
 * `Python 3.4 <https://github.com/pybee/Python-iOS-template/tree/3.4>`__
 * `Python 3.5 <https://github.com/pybee/Python-iOS-template/tree/3.5>`__
+* `Python 3.6 <https://github.com/pybee/Python-iOS-template/tree/3.6>`__
+* `Python 3.7 <https://github.com/pybee/Python-iOS-template/tree/3.7>`__
 
 See the individual branches for usage instructions.
