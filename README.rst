@@ -3,7 +3,7 @@ Python iOS Template
 
 A template for building Python apps that will run under iOS.
 
-**This repository branch contains a template for Python 3.5**.
+**This repository branch contains a template for Python 3.6**.
 Other Python versions are available by cloning other branches of repository.
 
 Using this template
@@ -23,7 +23,7 @@ However, if you *do* want use this template directly...
 
 2. Run ``cookiecutter`` on the Python-iOS template::
 
-    $ cookiecutter https://github.com/pybee/Python-iOS-template --checkout 3.5
+    $ cookiecutter https://github.com/pybee/Python-iOS-template --checkout 3.6
 
 3. `Download the Python Apple support package for iOS`_, and extract it. This
    will give you four frameworks.
@@ -127,7 +127,7 @@ links in the project source::
         setup.py
 
 .. _cookiecutter: https://github.com/audreyr/cookiecutter
-.. _Download the Python Apple support package for iOS: https://github.com/pybee/Python-Apple-support/releases/download/3.5-b1/Python-3.5-iOS-support.b1.tar.gz
+.. _Download the Python Apple support package for iOS: https://github.com/pybee/Python-Apple-support/releases/download/3.6-b1/Python-3.6-iOS-support.b1.tar.gz
 .. _Python-Apple-support: http://github.com/pybee/Python-Apple-support
 .. _Rubicon: http://pybee.org/project/projects/bridges/rubicon
 .. _toga: http://pybee.org/project/projects/libraries/toga
