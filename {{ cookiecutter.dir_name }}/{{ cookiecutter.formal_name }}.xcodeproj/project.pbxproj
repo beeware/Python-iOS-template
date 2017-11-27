@@ -20,7 +20,6 @@
 		60796EF019190F4100A9926B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 60796EEE19190F4100A9926B /* InfoPlist.strings */; };
 		60796EF219190F4100A9926B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60796EF119190F4100A9926B /* main.m */; };
 		60796EF819190F4100A9926B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60796EF719190F4100A9926B /* Images.xcassets */; };
-		60C3B9A91FCB9D1C00F0C929 /* package_data in Resources */ = {isa = PBXBuildFile; fileRef = 60C3B9A81FCB9D1C00F0C929 /* package_data */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +34,6 @@
 		60796EE519190F4100A9926B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		60796EE919190F4100A9926B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		608C6CCC1B3FF4DF00BD512E /* app */ = {isa = PBXFileReference; lastKnownFileType = folder; path = app; sourceTree = SOURCE_ROOT; };
-		60C3B9A81FCB9D1C00F0C929 /* package_data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = package_data; sourceTree = SOURCE_ROOT; };
 		60F0BABF191FC868006EC268 /* app_packages */ = {isa = PBXFileReference; lastKnownFileType = folder; path = app_packages; sourceTree = SOURCE_ROOT; };
 		60796EF119190F4100A9926B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		60796EE219190F4100A9926B /* {{ cookiecutter.formal_name }}.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "{{ cookiecutter.formal_name }}.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,7 +101,6 @@
 		60796EEB19190F4100A9926B /* {{ cookiecutter.app_name }} */ = {
 			isa = PBXGroup;
 			children = (
-				60C3B9A81FCB9D1C00F0C929 /* package_data */,
 				608C6CCC1B3FF4DF00BD512E /* app */,
 				60F0BABF191FC868006EC268 /* app_packages */,
 				60796EF719190F4100A9926B /* Images.xcassets */,
@@ -177,7 +174,6 @@
 			files = (
 				60796EF019190F4100A9926B /* InfoPlist.strings in Resources */,
 				60796EF819190F4100A9926B /* Images.xcassets in Resources */,
-				60C3B9A91FCB9D1C00F0C929 /* package_data in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
