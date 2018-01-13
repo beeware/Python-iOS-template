@@ -331,7 +331,7 @@
 					"\"$(PROJECT_DIR)/Python.framework/Resources/include/python2.7\"",
 				);
 				INFOPLIST_FILE = "{{ cookiecutter.app_name }}/{{ cookiecutter.app_name }}-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "{{ cookiecutter.bundle }}.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "{{ cookiecutter.bundle }}.{{ cookiecutter.app_name }}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = include/python2.7;
 				WRAPPER_EXTENSION = app;
@@ -355,7 +355,7 @@
 					"\"$(PROJECT_DIR)/Python.framework/Resources/include/python2.7\"",
 				);
 				INFOPLIST_FILE = "{{ cookiecutter.app_name }}/{{ cookiecutter.app_name }}-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "{{ cookiecutter.bundle }}.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "{{ cookiecutter.bundle }}.{{ cookiecutter.app_name }}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
