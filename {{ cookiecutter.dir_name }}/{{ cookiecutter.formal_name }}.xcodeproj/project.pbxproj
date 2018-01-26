@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60A942592010134500659F51 /* libbzip2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A942582010134500659F51 /* libbzip2.a */; };
+		60A942552010133100659F51 /* libOpenSSL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A942542010133100659F51 /* libOpenSSL.a */; };
+		60A942572010133C00659F51 /* libxz.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A942562010133C00659F51 /* libxz.a */; };
+		60A94253201012FE00659F51 /* libPython.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A94252201012FE00659F51 /* libPython.a */; };
 		6023B23D1C27D20F006F2562 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6023B23C1C27D20F006F2562 /* libsqlite3.tbd */; };
 		6023B23F1C27D218006F2562 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6023B23E1C27D218006F2562 /* libz.tbd */; };
-		607B9A7C1D2D539E0003ED50 /* BZip2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 607B9A7B1D2D539E0003ED50 /* BZip2.framework */; };
-		608C6CC91B3FF01D00BD512E /* OpenSSL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 608C6CC81B3FF01D00BD512E /* OpenSSL.framework */; };
-                601399B41D2E6B0600C7A1CB /* XZ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601399B31D2E6B0600C7A1CB /* XZ.framework */; };
-		60796F2C1919C70800A9926B /* Python.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60796F2B1919C70800A9926B /* Python.framework */; };
 		60796EE819190F4100A9926B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60796EE719190F4100A9926B /* CoreGraphics.framework */; };
 		60796F39191CDBBA00A9926B /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60796F38191CDBBA00A9926B /* CoreFoundation.framework */; };
 		60796EE619190F4100A9926B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60796EE519190F4100A9926B /* Foundation.framework */; };
@@ -23,16 +23,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		60A942582010134500659F51 /* libbzip2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libbzip2.a; path = Support/BZip2/libbzip2.a; sourceTree = "<group>"; };
+		60A942542010133100659F51 /* libOpenSSL.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOpenSSL.a; path = Support/OpenSSL/libOpenSSL.a; sourceTree = "<group>"; };
+		60A942562010133C00659F51 /* libxz.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libxz.a; path = Support/XZ/libxz.a; sourceTree = "<group>"; };
+		60A94252201012FE00659F51 /* libPython.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPython.a; path = Support/Python/libPython.a; sourceTree = "<group>"; };
 		6023B23C1C27D20F006F2562 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		6023B23E1C27D218006F2562 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		607B9A7B1D2D539E0003ED50 /* BZip2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BZip2.framework; sourceTree = "<group>"; };
-		608C6CC81B3FF01D00BD512E /* OpenSSL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenSSL.framework; sourceTree = "<group>"; };
-		601399B31D2E6B0600C7A1CB /* XZ.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = XZ.framework; sourceTree = "<group>"; };
-		60796F2B1919C70800A9926B /* Python.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Python.framework; sourceTree = "<group>"; };
 		60796F38191CDBBA00A9926B /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		60796EE719190F4100A9926B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		60796EE519190F4100A9926B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		60796EE919190F4100A9926B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		60A9424820100F7B00659F51 /* Support */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Support; sourceTree = "<group>"; };
 		608C6CCC1B3FF4DF00BD512E /* app */ = {isa = PBXFileReference; lastKnownFileType = folder; path = app; sourceTree = SOURCE_ROOT; };
 		60F0BABF191FC868006EC268 /* app_packages */ = {isa = PBXFileReference; lastKnownFileType = folder; path = app_packages; sourceTree = SOURCE_ROOT; };
 		60796EF119190F4100A9926B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -48,12 +49,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60A942592010134500659F51 /* libbzip2.a in Frameworks */,
+				60A942552010133100659F51 /* libOpenSSL.a in Frameworks */,
+				60A942572010133C00659F51 /* libxz.a in Frameworks */,
+				60A94253201012FE00659F51 /* libPython.a in Frameworks */,
 				6023B23F1C27D218006F2562 /* libz.tbd in Frameworks */,
 				6023B23D1C27D20F006F2562 /* libsqlite3.tbd in Frameworks */,
-				607B9A7C1D2D539E0003ED50 /* BZip2.framework in Frameworks */,
-				608C6CC91B3FF01D00BD512E /* OpenSSL.framework in Frameworks */,
-				601399B41D2E6B0600C7A1CB /* XZ.framework in Frameworks */,
-				60796F2C1919C70800A9926B /* Python.framework in Frameworks */,
 				60796F39191CDBBA00A9926B /* CoreFoundation.framework in Frameworks */,
 				60796EE819190F4100A9926B /* CoreGraphics.framework in Frameworks */,
 				60796EE619190F4100A9926B /* Foundation.framework in Frameworks */,
@@ -67,6 +68,7 @@
 		60796ED919190F4100A9926B = {
 			isa = PBXGroup;
 			children = (
+				60A9424820100F7B00659F51 /* Support */,
 				60796EEB19190F4100A9926B /* {{ cookiecutter.app_name }} */,
 				60796EE419190F4100A9926B /* Frameworks */,
 				60796EE319190F4100A9926B /* Products */,
@@ -84,12 +86,12 @@
 		60796EE419190F4100A9926B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				60A942582010134500659F51 /* libbzip2.a */,
+				60A942542010133100659F51 /* libOpenSSL.a */,
+				60A942562010133C00659F51 /* libxz.a */,
+				60A94252201012FE00659F51 /* libPython.a */,
 				6023B23C1C27D20F006F2562 /* libsqlite3.tbd */,
 				6023B23E1C27D218006F2562 /* libz.tbd */,
-				607B9A7B1D2D539E0003ED50 /* BZip2.framework */,
-				608C6CC81B3FF01D00BD512E /* OpenSSL.framework */,
-				601399B31D2E6B0600C7A1CB /* XZ.framework */,
-				60796F2B1919C70800A9926B /* Python.framework */,
 				60796F38191CDBBA00A9926B /* CoreFoundation.framework */,
 				60796EE719190F4100A9926B /* CoreGraphics.framework */,
 				60796EE519190F4100A9926B /* Foundation.framework */,
@@ -130,7 +132,7 @@
 				60796F2F1919C7E700A9926B /* Refresh Python source */,
 				60796EDE19190F4100A9926B /* Sources */,
 				60796EDF19190F4100A9926B /* Frameworks */,
-				60796EE019190F4100A9926B /* Resources */,
+				60796EE019190F4100A9926B /* Support */,
 			);
 			buildRules = (
 			);
@@ -192,7 +194,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "mkdir -p \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Python.framework/Resources\"\nmkdir -p \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Application Support/{{ cookiecutter.bundle }}.{{ cookiecutter.app_name }}\"\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git \"$PROJECT_DIR/Python.framework/Resources/lib\" \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Python.framework/Resources\"\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git \"$PROJECT_DIR/Python.framework/Resources/include\" \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Python.framework/Resources\"\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git \"$PROJECT_DIR/app\" \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Application Support/{{ cookiecutter.bundle }}.{{ cookiecutter.app_name }}\"\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git \"$PROJECT_DIR/app_packages\" \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Application Support/{{ cookiecutter.bundle }}.{{ cookiecutter.app_name }}\"";
+			shellScript = "mkdir -p \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Python\"\nmkdir -p \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Application Support/{{ cookiecutter.bundle }}.{{ cookiecutter.app_name }}\"\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git \"$PROJECT_DIR/Support/Python/Resources/lib\" \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Python\"\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git \"$PROJECT_DIR/app\" \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Application Support/{{ cookiecutter.bundle }}.{{ cookiecutter.app_name }}\"\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git \"$PROJECT_DIR/app_packages\" \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Application Support/{{ cookiecutter.bundle }}.{{ cookiecutter.app_name }}\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -328,12 +330,22 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"\"$(PROJECT_DIR)/Python.framework/Resources/include/python2.7\"",
+					"\"$(PROJECT_DIR)/Support/BZip2/Headers\"",
+					"\"$(PROJECT_DIR)/Support/OpenSSL/Headers\"",
+					"\"$(PROJECT_DIR)/Support/XZ/Headers\"",
+					"\"$(PROJECT_DIR)/Support/Python/Headers\"",
 				);
 				INFOPLIST_FILE = "{{ cookiecutter.app_name }}/{{ cookiecutter.app_name }}-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "{{ cookiecutter.bundle }}.{{ cookiecutter.app_name }}";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Support/Python",
+					"$(PROJECT_DIR)/Support/OpenSSL",
+					"$(PROJECT_DIR)/Support/XZ",
+					"$(PROJECT_DIR)/Support/BZip2",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.keith-magee.traveltips";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = include/python2.7;
+				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -352,9 +364,19 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"\"$(PROJECT_DIR)/Python.framework/Resources/include/python2.7\"",
+					"\"$(PROJECT_DIR)/Support/BZip2/Headers\"",
+					"\"$(PROJECT_DIR)/Support/OpenSSL/Headers\"",
+					"\"$(PROJECT_DIR)/Support/XZ/Headers\"",
+					"\"$(PROJECT_DIR)/Support/Python/Headers\"",
 				);
 				INFOPLIST_FILE = "{{ cookiecutter.app_name }}/{{ cookiecutter.app_name }}-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Support/BZip2",
+					"$(PROJECT_DIR)/Support/OpenSSL",
+					"$(PROJECT_DIR)/Support/XZ",
+					"$(PROJECT_DIR)/Support/Python",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "{{ cookiecutter.bundle }}.{{ cookiecutter.app_name }}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
