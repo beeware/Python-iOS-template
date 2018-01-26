@@ -26,13 +26,13 @@ However, if you *do* want use this template directly...
     $ cookiecutter https://github.com/pybee/Python-iOS-template --checkout 2.7
 
 3. `Download the Python Apple support package for iOS`_, and extract it. This
-   will give you three frameworks.
+   will create a ``support`` directory containing three libraries:
 
-   * ``BZip2.framework``
+   * BZip2
 
-   * ``OpenSSL.framework``
+   * OpenSSL
 
-   * ``Python.framework``
+   * Python
 
    Alternatively, you can download the `Python-Apple-support`_ project, and
    build your own versions of these frameworks.
@@ -61,15 +61,11 @@ looks something like::
                 app.py (declares PythonAppDelegate)
         app_packages/
             ...
-        BZip2.framework/
-            ...
-        OpenSSL.framework/
-            ...
-        Python.framework/
-            ...
         myproject/
             ...
         My Project.xcodeproj/
+            ...
+        support/
             ...
 
 
@@ -123,7 +119,7 @@ links in the project source::
         setup.py
 
 .. _cookiecutter: https://github.com/audreyr/cookiecutter
-.. _Download the Python Apple support package for iOS: https://github.com/pybee/Python-Apple-support/releases/download/2.7-b1/Python-2.7-iOS-support.b1.tar.gz
+.. _Download the Python Apple support package for iOS: https://s3-us-west-2.amazonaws.com/pybee-briefcase-support/Python-Apple-support/2.7/iOS/Python-2.7-macOS-support.b4.tar.gz
 .. _Python-Apple-support: http://github.com/pybee/Python-Apple-support
 .. _Rubicon: http://pybee.org/project/projects/bridges/rubicon
 .. _toga: http://pybee.org/project/projects/libraries/toga
