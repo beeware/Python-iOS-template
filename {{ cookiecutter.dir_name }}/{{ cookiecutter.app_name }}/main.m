@@ -5,7 +5,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#include <Python/Python.h>
+#include <Python.h>
 #include <dlfcn.h>
 
 int main(int argc, char *argv[]) {
@@ -28,7 +28,7 @@ int main(int argc, char *argv[]) {
         putenv("PYTHONDONTWRITEBYTECODE=1");
 
         // Set the home for the Python interpreter
-        python_home = [NSString stringWithFormat:@"%@/Library/Python.framework/Resources", resourcePath, nil];
+        python_home = [NSString stringWithFormat:@"%@/Library/Python", resourcePath, nil];
         NSLog(@"PythonHome is: %@", python_home);
         wpython_home = Py_DecodeLocale([python_home UTF8String], NULL);
         Py_SetPythonHome(wpython_home);
