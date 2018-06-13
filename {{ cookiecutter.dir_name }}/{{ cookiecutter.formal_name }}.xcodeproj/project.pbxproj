@@ -343,7 +343,7 @@
 					"$(PROJECT_DIR)/Support/XZ",
 					"$(PROJECT_DIR)/Support/BZip2",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.keith-magee.traveltips";
+				PRODUCT_BUNDLE_IDENTIFIER = "{{ cookiecutter.bundle }}.{{ cookiecutter.app_name }}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
