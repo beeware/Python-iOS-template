@@ -8,15 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		60A942592010134500659F51 /* libbzip2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A942582010134500659F51 /* libbzip2.a */; };
-		60A942552010133100659F51 /* libOpenSSL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A942542010133100659F51 /* libOpenSSL.a */; };
-		60A942572010133C00659F51 /* libxz.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A942562010133C00659F51 /* libxz.a */; };
-		60A94253201012FE00659F51 /* libPython.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A94252201012FE00659F51 /* libPython.a */; };
 		6023B23D1C27D20F006F2562 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6023B23C1C27D20F006F2562 /* libsqlite3.tbd */; };
+		60A942572010133C00659F51 /* libxz.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A942562010133C00659F51 /* libxz.a */; };
 		6023B23F1C27D218006F2562 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6023B23E1C27D218006F2562 /* libz.tbd */; };
+		60A942552010133100659F51 /* libOpenSSL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A942542010133100659F51 /* libOpenSSL.a */; };
+		60A94253201012FE00659F51 /* libPython.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A94252201012FE00659F51 /* libPython.a */; };
 		60796EE819190F4100A9926B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60796EE719190F4100A9926B /* CoreGraphics.framework */; };
 		60796F39191CDBBA00A9926B /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60796F38191CDBBA00A9926B /* CoreFoundation.framework */; };
 		60796EE619190F4100A9926B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60796EE519190F4100A9926B /* Foundation.framework */; };
 		60796EEA19190F4100A9926B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60796EE919190F4100A9926B /* UIKit.framework */; };
+		6014304C2157415B00C9A299 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6014304B2157415B00C9A299 /* WebKit.framework */; };
 		60796EF019190F4100A9926B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 60796EEE19190F4100A9926B /* InfoPlist.strings */; };
 		60796EF219190F4100A9926B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60796EF119190F4100A9926B /* main.m */; };
 		60796EF819190F4100A9926B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60796EF719190F4100A9926B /* Images.xcassets */; };
@@ -24,15 +25,16 @@
 
 /* Begin PBXFileReference section */
 		60A942582010134500659F51 /* libbzip2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libbzip2.a; path = Support/BZip2/libbzip2.a; sourceTree = "<group>"; };
-		60A942542010133100659F51 /* libOpenSSL.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOpenSSL.a; path = Support/OpenSSL/libOpenSSL.a; sourceTree = "<group>"; };
-		60A942562010133C00659F51 /* libxz.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libxz.a; path = Support/XZ/libxz.a; sourceTree = "<group>"; };
-		60A94252201012FE00659F51 /* libPython.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPython.a; path = Support/Python/libPython.a; sourceTree = "<group>"; };
 		6023B23C1C27D20F006F2562 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		60A942562010133C00659F51 /* libxz.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libxz.a; path = Support/XZ/libxz.a; sourceTree = "<group>"; };
 		6023B23E1C27D218006F2562 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		60A942542010133100659F51 /* libOpenSSL.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOpenSSL.a; path = Support/OpenSSL/libOpenSSL.a; sourceTree = "<group>"; };
+		60A94252201012FE00659F51 /* libPython.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPython.a; path = Support/Python/libPython.a; sourceTree = "<group>"; };
 		60796F38191CDBBA00A9926B /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		60796EE719190F4100A9926B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		60796EE519190F4100A9926B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		60796EE919190F4100A9926B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6014304B2157415B00C9A299 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		60A9424820100F7B00659F51 /* Support */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Support; sourceTree = "<group>"; };
 		608C6CCC1B3FF4DF00BD512E /* app */ = {isa = PBXFileReference; lastKnownFileType = folder; path = app; sourceTree = SOURCE_ROOT; };
 		60F0BABF191FC868006EC268 /* app_packages */ = {isa = PBXFileReference; lastKnownFileType = folder; path = app_packages; sourceTree = SOURCE_ROOT; };
@@ -59,6 +61,7 @@
 				60796EE819190F4100A9926B /* CoreGraphics.framework in Frameworks */,
 				60796EE619190F4100A9926B /* Foundation.framework in Frameworks */,
 				60796EEA19190F4100A9926B /* UIKit.framework in Frameworks */,
+				6014304C2157415B00C9A299 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +99,7 @@
 				60796EE719190F4100A9926B /* CoreGraphics.framework */,
 				60796EE519190F4100A9926B /* Foundation.framework */,
 				60796EE919190F4100A9926B /* UIKit.framework */,
+				6014304B2157415B00C9A299 /* WebKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -225,6 +229,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -278,6 +283,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -350,7 +356,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "{{ cookiecutter.bundle }}.{{ cookiecutter.app_name }}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "";
-				VALID_ARCHS = arm64;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -384,7 +389,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "{{ cookiecutter.bundle }}.{{ cookiecutter.app_name }}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				VALID_ARCHS = arm64;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
